@@ -1,0 +1,145 @@
+html {
+    height: 100%;
+}
+body {
+    font-family: "Courier New", sans-serif;
+    text-align: center;
+    height: 100%;
+}
+.state {
+    font-size: 2em;
+}
+.square {
+    position:absolute;
+    font-weight: bold;
+    font-size: 1.5em;
+    white-space: normal;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.circle {
+    display: flex;
+    position:absolute;
+    font-weight: bold;
+    font-size: 1.5em;
+    white-space: normal;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+}
+.toolbox-draw-body {
+    margin: 10px 0px 0px 10px;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.button {
+    margin: 5px 0px 10px 10px;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-width: 100px;
+    min-height: 30px;
+}
+.vertical-line {
+
+    border-left: 6px solid blue;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+.horizontal-line {
+    width: 112px;
+    height: 47px;
+    border-bottom: 6px solid blue;
+    position: absolute
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 130px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid black;
+    width: 30%;
+    height: 48%;
+    text-align: left;
+}
+
+.modal-header {
+    margin-bottom: 40px;
+    /*font-size: 1em;*/
+
+}
+
+.modal-body {
+    float: left;
+    width: 100%;
+}
+
+.modal-button {
+    float: right;
+    font-weight: bold;
+    margin-right: 5px;
+    min-width:120px;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+
+.input {
+    display: block;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+}

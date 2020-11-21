@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrum Board - Group 2</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+		<div id="background" style="float:left; width:88%; height:100%; border:2px solid black">
+            <div class="state"><span class="users" id="user-state" style="font-size:2.5em; height:200px; border:2px solid black; background:#ff9933; user-select: none;">Cannot Find Server</span></div>
+			<div id="trash">
+				<img id="trash-img" src="trash_bin.png" width="100" height="100" align="right">
+			</div>
+		</div>
+
+
+        <div id="draw-toolbox" style="float:right; width:10%; height:430px; border:2px solid black">
+            <div class="state" style="border-bottom: 2px solid black">Toolbox</div>
+            <div class="toolbox-draw-body">Draw:</div>
+            <button id="square-button" class="button" onclick="drawButtonClick(this.id)">Square</button>
+            <button id="circle-button" class="button" onclick="drawButtonClick(this.id)">Circle</button>
+            <button id="vertical-line-button" class="button" onclick="drawButtonClick(this.id)">v-line</button>
+            <button id="horizontal-line-button" class="button" onclick="drawButtonClick(this.id)">h-line</button>
+
+            <div class="toolbox-draw-body">Color:</div>
+            <select style="margin: 10px 0px 10px 10px; float: left" name="Select" id="color_select">
+                <option value="solid black">Black</option>
+                <option value="solid red">Red</option>
+                <option value="solid green">Green</option>
+                <option value="solid blue">Blue</option>
+                <option value="solid purple">Purple</option>
+            </select>
+
+            <div class="toolbox-draw-body">Save/Load:</div>
+            <button id="save-backup-button" class="button" onclick="saveBackupByUser()">Save</button>
+            <button id="load-backup-button" class="button" onclick="loadBackupFile()">Load</button>
+        </div>
+
+
+
+        <div id="userlist" style="float:right; width:10%; border:2px solid black; background:#F5F0A3; font-size:1em; margin-top: 10px">
+            <div class="state" style="border-bottom: 2px solid black">Users</div>
+            <ul id="users" style="text-align:   left; padding-left: 20px"></ul>
+        </div>
+
+
+        <!-- Select/Manage Item Modal -->
+        <div id="itemModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="header">Manage Item</span>
+                    <span class="close">&times;</span>
+                </div>
+
+                <div class="modal-body">
+                    <b>Title:</b>
+                    <p class="input"><input type="text" id="itemTitle" maxlength="124" placeholder="Add a title..."></p>
+                    <b>Assignee:</b>
+                    <p class="input"><input type="text" id="itemAssignee" maxlength="124" placeholder="Unassigned"></p>
+                    <b>Description:</b>
+                    <p class="input"><textarea type="text" id="itemDescription" maxlength=1024 placeholder="Add a more detailed description..."></textarea></p>
+                    <b>Color:</b>
+                    <select name="Select" id="modal_color_select">
+                        <option id="solid black" value="solid black">Black</option>
+                        <option id="solid red" value="solid red">Red</option>
+                        <option id="solid green" value="solid green">Green</option>
+                        <option id="solid blue" value="solid blue">Blue</option>
+                        <option id="solid purple" value="solid purple">Purple</option>
+                    </select>
+                    <button id="modal-button" class="modal-button" onclick="handleUpdateItem()">Update Item</button>
+                    <button class="modal-button" style="min-width: 60px" onclick="handleModalDeleteItem()">Delete Item</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</html>
